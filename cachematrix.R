@@ -29,8 +29,8 @@ makemat <- function(x = matrix()) {
 cachesolve <- function(x = matrix(), ...) {
 
 	s <- x$getsolve()
-        			## if s is not null anywhere in the global environment
-   							## then it returns the value of s
+        ## if s is not null anywhere in the global environment
+   				## then it returns the value of s
 	if(!is.null(s)) {
 
         	message("getting cached data")
@@ -41,11 +41,11 @@ cachesolve <- function(x = matrix(), ...) {
         
 
 	data <- x$get()
-					## if s is not defined anywhere in the global environment
+		## if s is not defined anywhere in the global environment
         s <- solve(data, ...)
-				## then it assigns x to data, and then inverse of data to
+	## then it assigns x to data, and then inverse of data to
         x$setsolve(s)
-        				## s and returns that value.
+        	## s and returns that value.
 	s
 
 }
